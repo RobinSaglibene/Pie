@@ -9,6 +9,8 @@
 
 void DrawText(gdImagePtr im, double radius,long angle,int color,int center,float min,float max, char* arg,float value);
 
+void help();
+
 int main( int argc, char *argv[]) {
 
   /* Declare the image */
@@ -68,6 +70,10 @@ int main( int argc, char *argv[]) {
           else if(strcmp(argv[k],"-File")==0)
           {
               filepng=argv[k+1];
+          }
+          else if(strcmp(argv[k],"-Help")==0)
+          {
+              help();
           }
           k++;
       }
@@ -163,4 +169,28 @@ void DrawText(gdImagePtr im, double radius,long angle,int color,int center,float
     strcat(text,"%");
     afficheEtiquetteLabel(im,&x, &y,text);
     gdImageString(im,gdFontLarge,x,y,text,color);
+}
+
+void help(){
+    printf("# PIE \n# Installation \nProject created with QTcreator \nInstall gdlib first \
+\n```bash"
+       "\napt-get install libgd-dev"
+       "\n```"
+
+       "\n# Usage"
+
+       "\n-Size suivi d'une valeur pour mettre la taille du cercle exemple 70"
+
+       "\n-File suivi d'un nom de fichier pour enregistrer le fichier de sortie exemple monfichier.png"
+
+       "\n-Data suivi des pourcentages et titres pour rentrer les données exemple 50/usa/50/uk"
+
+       "\n-Help"
+
+       "\nIn project setting, "
+       "\nadd arguement in the command line arguments field for exemple :"
+
+       "\n```bash"
+       "\n-Size 70 -File Monfichier1.png -Data 60/USA/15/UK/10/Canada/10/Other/5/Australia"
+       "\n```");
 }
