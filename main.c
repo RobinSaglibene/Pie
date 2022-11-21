@@ -30,15 +30,14 @@ int main( int argc, char *argv[]) {
   //Draw a white ectangle
   gdImageFilledRectangle(im,0,0,800,800,white);
 
+
   //if there is at least one argument
   if(argv[1])
   {
       // variables to get the arguments
-      char *ch_arg=(char*)malloc(255);
-      strcpy(ch_arg,argv[1]);
-      char d []= "*";
-      char d2 []= "/";
-      char *arg_init= strtok(ch_arg,d);
+      /*char *ch_arg=(char*)malloc(255);
+      strcpy(ch_arg,argv[1]);*/
+      char d []= "/";
 
       //Variable for the while
       char *data;
@@ -51,33 +50,28 @@ int main( int argc, char *argv[]) {
       float min=0,max=0;
       float argument;
 
-      while (arg_init != NULL)
-      {
-          if(strcmp(arg_init,"-Size")==0)
+      int k=1;
+      while (argc !=k)
+      { 
+          if(strcmp(argv[k],"-Size")==0)
           {
-              arg_init= strtok(NULL,d);
-              outerCircle=center+strtol(arg_init,NULL,10);
+              outerCircle=center+strtol(argv[k+1],NULL,10);
           }
-          else if(strcmp(arg_init,"-Data")==0)
+          else if(strcmp(argv[k],"-Data")==0)
           {
-              arg_init= strtok(NULL,d);
-              //arg = strtok(arg_init,d);
-              data=arg_init;
-              printf("%s\n",data);
+              data=argv[k+1];
           }
-          else if(strcmp(arg_init,"-File")==0)
+          else if(strcmp(argv[k],"-File")==0)
           {
-              arg_init= strtok(NULL,d);
-              filepng=arg_init;
-              printf("test %s\n",filepng);
+              filepng=argv[k+1];
           }
-          else arg_init= strtok(NULL,d);
+          k++;
       }
-       arg=strtok(data,d2);
+       arg=strtok(data,d);
+
       //While to draw filled arc and text
       while(arg !=NULL)
       {
-          printf("%s\n",arg);
               if(i%2==0)
               {
                   argument =(float)strtol(arg,NULL,10);
@@ -98,7 +92,7 @@ int main( int argc, char *argv[]) {
                   DrawText(im,radius,140,black,center,min,max,arg,argument);
                   min=max;
               }
-              arg= strtok(NULL,d2);
+              arg= strtok(NULL,d);
               i++;
       }
   }
@@ -115,9 +109,11 @@ int main( int argc, char *argv[]) {
 
   char command[32];
   char data[1024];
-  //sprintf(command, "display %s",filepng);
+  sprintf(command, "display %s",filepng);
   //Open the process with given 'command' for reading
-  /*FILE* file = popen(command, "r");
+
+  /*
+  FILE* file = popen(command, "r");
   // do something with program output.
   while (fgets(data, sizeof(data)-1, file) != NULL)
   {
@@ -134,6 +130,7 @@ void DrawText(gdImagePtr im, double radius,long angle,int color,int center,float
     else halfangles=min+((max-min)/2);
     double x=center+((radius)*cos(M_PI*(halfangles)/180));
     if(x<400) x-=80;
+    else x-=40;
     double y=center+((radius)*sin(M_PI*(halfangles)/180));
     char *text=(char*)malloc(255);
     char *ch_value=(char*)malloc(7);

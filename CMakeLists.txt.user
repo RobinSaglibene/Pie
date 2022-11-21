@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.14.1, 2022-11-21T13:23:48. -->
+<!-- Written by QtCreator 4.14.1, 2022-11-21T13:51:11. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -336,7 +336,7 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">TPC</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.TPC</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">TPC</value>
-    <value type="QString" key="RunConfiguration.Arguments">-Size*150*-File*Monfichier1.png*-Data*60/USAA/15/UK/10/Canada/10/Other/5/Australia</value>
+    <value type="QString" key="RunConfiguration.Arguments">-Size 70 -File Monfichier1.png -Data 60/USA/15/UK/10/Canada/10/Other/5/Australia</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
