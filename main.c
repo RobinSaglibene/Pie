@@ -105,9 +105,14 @@ int main( int argc, char *argv[]) {
 
   char command[32];
   char data[1024];
-  //sprintf(command, "display %s",filepng);
+  sprintf(command, "display %s",filepng);
   //Open the process with given 'command' for reading
+
+  /*
+  FILE* file = popen(command, "r");
+=======
   /*FILE* file = popen(command, "r");
+>>>>>>> 5ad3a3b0c688013c743893dd617149d080aeaeaf
   // do something with program output.
   while (fgets(data, sizeof(data)-1, file) != NULL)
   {
