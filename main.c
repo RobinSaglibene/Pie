@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#define NULL 0
 
 void DrawText(gdImagePtr im, double radius,long angle,int color,int center,float min,float max, char* arg,float value);
 
@@ -104,7 +105,7 @@ int main( int argc, char *argv[]) {
 
   char command[32];
   char data[1024];
-  sprintf(command, "display %s",filepng);
+  //sprintf(command, "display %s",filepng);
   //Open the process with given 'command' for reading
   FILE* file = popen(command, "r");
   // do something with program output.
