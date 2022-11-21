@@ -1,6 +1,6 @@
 # PIE
 
-# Installations
+# Installation
 
 Project created with QTcreator
 

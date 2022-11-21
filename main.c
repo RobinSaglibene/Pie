@@ -102,7 +102,7 @@ int main( int argc, char *argv[]) {
 
   char command[32];
   char data[1024];
-  sprintf(command, "display %s",filepng);
+  //sprintf(command, "display %s",filepng);
   //Open the process with given 'command' for reading
   FILE* file = popen(command, "r");
   // do something with program output.
