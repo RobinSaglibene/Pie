@@ -71,6 +71,8 @@ int main( int argc, char *argv[]) {
                   b+=(255/nbr_arg);
                   g+=(255/nbr_arg);
 
+                  int r =rand()%256+1,g=rand()%256+1,b=rand()%256+1; // génération couleurs aléatoires
+
                   int color=gdImageColorAllocate(im, r, g, b);
                   gdImageFilledArc(im,center,center,outerCircle,outerCircle,min,max,color,0);
               }

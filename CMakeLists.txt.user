@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.14.1, 2022-11-13T21:28:17. -->
+<!-- Written by QtCreator 4.14.1, 2022-11-21T11:00:31. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{441b5577-f804-4615-a11b-a2090859a525}</value>
+  <value type="QByteArray">{23924e84-2e3d-401b-963e-4f6149b472db}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -68,8 +68,8 @@
    <value type="int" key="AutoTest.RunAfterBuild">0</value>
    <value type="bool" key="AutoTest.UseGlobal">true</value>
    <valuelist type="QVariantList" key="ClangCodeModel.CustomCommandLineKey"/>
-   <value type="bool" key="ClangCodeModel.UseGlobalConfig">false</value>
-   <value type="QString" key="ClangCodeModel.WarningConfigId">{acd01e24-f9ad-4c4a-8744-9c78f57185f8}</value>
+   <value type="bool" key="ClangCodeModel.UseGlobalConfig">true</value>
+   <value type="QString" key="ClangCodeModel.WarningConfigId">Builtin.Questionable</value>
    <valuemap type="QVariantMap" key="ClangTools">
     <value type="bool" key="ClangTools.AnalyzeOpenFiles">true</value>
     <value type="bool" key="ClangTools.BuildBeforeAnalysis">true</value>
@@ -88,7 +88,7 @@
    <value type="QString" key="DeviceType">Desktop</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{98408bf5-a538-4fb6-866f-4f9f95cd4772}</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{f6bd6566-5e3e-4e11-a25e-aefa4c3e0b2f}</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
@@ -99,7 +99,7 @@
 -DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
 -DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
 -DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/robins/TPC/../build-TPC-Desktop-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/jeremy/Documents/Git/Pie/../build-Pie-Desktop-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
@@ -142,7 +142,7 @@
 -DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
 -DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
 -DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/robins/TPC/../build-TPC-Desktop-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/jeremy/Documents/Git/Pie/../build-Pie-Desktop-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
@@ -183,7 +183,7 @@
 -DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
 -DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
 -DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/robins/TPC/../build-TPC-Desktop-RelWithDebInfo</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/jeremy/Documents/Git/Pie/../build-Pie-Desktop-RelWithDebInfo</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
@@ -224,7 +224,7 @@
 -DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
 -DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
 -DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/robins/TPC/../build-TPC-Desktop-MinSizeRel</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/jeremy/Documents/Git/Pie/../build-Pie-Desktop-MinSizeRel</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
@@ -333,16 +333,12 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">TPC</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.TPC</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">TPC</value>
-    <value type="QString" key="RunConfiguration.Arguments">60/USA/15/UK/10/Canada/10/Other/5/Australia/Monfichier.png</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
-    <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/robins/build-TPC-Desktop-Debug</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
