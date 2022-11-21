@@ -17,12 +17,16 @@ int main( int argc, char *argv[]) {
   FILE *pngout;
 
   /* Allocate the image: 1000 pixels across by 1000 pixels tall */
-  im = gdImageCreate(800, 800);
+  im = gdImageCreateTrueColor(800, 800);
+
 
   /* Allocate the color white for the background */
   int white = gdImageColorAllocate(im, 255, 255, 255);
   // Allocate the color black to write text
   int black = gdImageColorAllocate(im, 0, 0, 0);
+
+  gdImageAlphaBlending(im,gdEffectAlphaBlend);
+  gdImageFill(im, 0,0,white);
 
   //Variable for the
   char *filepng="filepng.png";
@@ -123,6 +127,24 @@ int main( int argc, char *argv[]) {
   return(0);
 }
 
+void afficheEtiquetteLabel(gdImagePtr im,double* posX, double* posY, char * label)
+{
+    int padding = 2;
+
+
+    int length = strlen(label);
+    int color = gdImageColorAllocateAlpha(im, 200,200,200, 30);
+
+    int offsetX = length*8;
+    int offsetY =  18 ;
+    int max_X = *(posX) + offsetX;
+
+    if (max_X > 1000) // si notre affichage dépasse de l'image, on décale l'affichage et on modifie posX et posY pour l'affichage du label
+    {
+        *posX = *(posX) - ( max_X - 1000);
+    }
+    gdImageFilledRectangle(im, *(posX)-padding, *posY, *(posX) +offsetX, *(posY) + offsetY, color);
+}
 void DrawText(gdImagePtr im, double radius,long angle,int color,int center,float min,float max,char* arg,float value)
 {
     double halfangles;
@@ -139,6 +161,6 @@ void DrawText(gdImagePtr im, double radius,long angle,int color,int center,float
     strcat(text," : ");
     strcat(text,ch_value);
     strcat(text,"%");
+    afficheEtiquetteLabel(im,&x, &y,text);
     gdImageString(im,gdFontLarge,x,y,text,color);
 }
-
