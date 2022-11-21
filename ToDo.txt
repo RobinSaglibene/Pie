@@ -4,4 +4,6 @@ modif3: ajouter une aide avec l'option -h
 modif4: rendre le choix des couleurs aléatoires
 modifr5: ajouter la taille du camembert
 modif6: ajouter une couleur de fond
+modif7 : renvoyer un message quand la ligne de commande n'est pas bonne
+
 

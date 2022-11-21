@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/TPC.dir/main.c.o -o TPC  -lgd -lm 

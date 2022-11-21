@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vboxuser/pie_project/main.c
+gd.h
+/home/vboxuser/pie_project/gd.h
+gdfontl.h
+/home/vboxuser/pie_project/gdfontl.h
+math.h
+-
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+

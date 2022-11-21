@@ -1,0 +1,3 @@
+/home/vboxuser/pie_project/CMakeFiles/rebuild_cache.dir
+/home/vboxuser/pie_project/CMakeFiles/edit_cache.dir
+/home/vboxuser/pie_project/CMakeFiles/TPC.dir
