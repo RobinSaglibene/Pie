@@ -1,6 +1,6 @@
 # PIE
 
-#Installation
+# Installations
 
 Project created with QTcreator
 
@@ -10,7 +10,7 @@ Install gdlib first
 apt-get install libgd-dev
 ```
 
-#Usage
+# Usage
 
 In project setting, 
 add arguement in the command line arguments field for exemple :
