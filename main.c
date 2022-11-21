@@ -36,19 +36,13 @@ int main( int argc, char *argv[]) {
       // variables to get the arguments
       char *ch_arg=(char*)malloc(255);
       strcpy(ch_arg,argv[1]);
-      char d []= "/";
-      char *arg_nbr= strtok(ch_arg,d);
-
-      // count number of arguments
-      int nbr_arg=0;
-      while (arg_nbr != NULL)
-      {
-          arg_nbr= strtok(NULL,d);
-          nbr_arg++;
-      }
+      char d []= "*";
+      char d2 []= "/";
+      char *arg_init= strtok(ch_arg,d);
 
       //Variable for the while
-      char *arg=strtok(argv[1],d);
+      char *data;
+      char *arg;
       int i=0;
       int r=0,g=0,b=100;
       int purcent;
@@ -57,20 +51,42 @@ int main( int argc, char *argv[]) {
       float min=0,max=0;
       float argument;
 
+      while (arg_init != NULL)
+      {
+          if(strcmp(arg_init,"-Size")==0)
+          {
+              arg_init= strtok(NULL,d);
+              outerCircle=center+strtol(arg_init,NULL,10);
+          }
+          else if(strcmp(arg_init,"-Data")==0)
+          {
+              arg_init= strtok(NULL,d);
+              //arg = strtok(arg_init,d);
+              data=arg_init;
+              printf("%s\n",data);
+          }
+          else if(strcmp(arg_init,"-File")==0)
+          {
+              arg_init= strtok(NULL,d);
+              filepng=arg_init;
+              printf("test %s\n",filepng);
+          }
+          else arg_init= strtok(NULL,d);
+      }
+       arg=strtok(data,d2);
       //While to draw filled arc and text
       while(arg !=NULL)
       {
-          if(i<(nbr_arg-1))
-          {
+          printf("%s\n",arg);
               if(i%2==0)
               {
                   argument =(float)strtol(arg,NULL,10);
                   purcent=(argument/100)*360;
 
                   max=min+purcent;
-                  r+=(255/nbr_arg);
-                  b+=(255/nbr_arg);
-                  g+=(255/nbr_arg);
+                  r+=(255/5);
+                  b+=(255/5);
+                  g+=(255/5);
 
                   int r =rand()%256+1,g=rand()%256+1,b=rand()%256+1; // génération couleurs aléatoires
 
@@ -82,14 +98,8 @@ int main( int argc, char *argv[]) {
                   DrawText(im,radius,140,black,center,min,max,arg,argument);
                   min=max;
               }
-              arg= strtok(NULL,d);
+              arg= strtok(NULL,d2);
               i++;
-          }
-          else
-          {
-              filepng=arg;
-              arg= strtok(NULL,d);
-          }
       }
   }
 
@@ -124,7 +134,6 @@ void DrawText(gdImagePtr im, double radius,long angle,int color,int center,float
     else halfangles=min+((max-min)/2);
     double x=center+((radius)*cos(M_PI*(halfangles)/180));
     if(x<400) x-=80;
-    else x-=40;
     double y=center+((radius)*sin(M_PI*(halfangles)/180));
     char *text=(char*)malloc(255);
     char *ch_value=(char*)malloc(7);
