@@ -34,6 +34,7 @@ int main( int argc, char *argv[]) {
   //Draw a white ectangle
   gdImageFilledRectangle(im,0,0,800,800,white);
 
+
   //if there is at least one argument
   if(argv[1])
   {
@@ -60,6 +61,11 @@ int main( int argc, char *argv[]) {
       double radius=305;
       float min=0,max=0;
       float argument;
+
+      //Set the size of the chart
+      if(argc==3){
+          outerCircle = atoi(argv[2]);
+      }
 
       //While to draw filled arc and text
       while(arg !=NULL)
