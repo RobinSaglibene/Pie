@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#define NULL 0
 
 void DrawText(gdImagePtr im, double radius,long angle,int color,int center,float min,float max, char* arg,float value);
 
