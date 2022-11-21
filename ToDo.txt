@@ -1,0 +1,5 @@
+modi1: enlever les / entre les options
+modif2: ajouter une option -o fichier.png pour le fichier de sortie
+modif3: ajouter une aide avec l'option -h
+
+
